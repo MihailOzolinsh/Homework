@@ -3,3 +3,30 @@
  padding: 0;
  box-sizing: border-box;
 }
+
+.container {
+    width: 500px;
+    padding: 30vh 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(98, 98, 98);
+}
+   
+.btn-cart {
+ background: none;
+ border: 2px solid rgba(136, 255, 0, 0.692);
+ color: rgba(136, 255, 0, 0.692);
+ &:hover {
+  background: rgba(136, 255, 0, 0.692);
+  color: #fff;
+ }
+}
+   
+.products {
+ color: rgba(136, 255, 0, 0.692);
+} 
+
+.total-price {
+    color: aqua;
+}
