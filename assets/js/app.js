@@ -5,11 +5,10 @@ const products = [
  {id: 3, title: 'Keyboard', price: 250},
  {id: 4, title: 'Gamepad', price: 150},
 ];
-const renderAll = (list, title, price) => {
- const productList = list.map(item => {return '<div class="product-item"><h3>' + item.title + '</h3><p>' + item.price + '</p></div>'}).join('');
- document.querySelector('.products').innerHTML = productList;
-};
-renderAll(products);
+products.forEach(product => {
+   const productRender = '<div class="product-item"><h3>' + product.title + '</h3><p>' + product.price + '</p></div>';
+   document.querySelector('.products').insertAdjacentHTML('beforeend', productRender);
+})
 /* 
  Ответ на вопрос почему добавляются ',': 
   Они добавляются так как это массив map а у массива добавляется такое значение после каждого ключа.
@@ -46,9 +45,8 @@ renderAll(products);
   {id: 3, title: 'Keyboard', price: 250},
   {id: 4, title: 'Gamepad', price: 150},
  ];
- const renderAll = (list, title, price) => {
-  const productList = list.map(item => {return '<div class="product-item"><h3>' + item.title + '</h3><p>' + item.price + '</p></div>'}).join('');
-  document.querySelector('.products').innerHTML = productList;
- };
- renderAll(products);
+ products.forEach(product => {
+   const productRender = '<div class="product-item"><h3>' + product.title + '</h3><p>' + product.price + '</p></div>';
+   document.querySelector('.products').insertAdjacentHTML('beforeend', productRender);
+   })
 */ 
